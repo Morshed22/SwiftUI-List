@@ -13,6 +13,8 @@
 		036D9303299D91C9009D8A65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036D9302299D91C9009D8A65 /* Preview Assets.xcassets */; };
 		036D930B299D98C2009D8A65 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D930A299D98C2009D8A65 /* Book.swift */; };
 		036D930E299D994D009D8A65 /* Book views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D930D299D994D009D8A65 /* Book views.swift */; };
+		036D9310299DCDDA009D8A65 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D930F299DCDDA009D8A65 /* Library.swift */; };
+		036D9312299DCFD0009D8A65 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D9311299DCFCF009D8A65 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		036D9302299D91C9009D8A65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		036D930A299D98C2009D8A65 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		036D930D299D994D009D8A65 /* Book views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book views.swift"; sourceTree = "<group>"; };
+		036D930F299DCDDA009D8A65 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		036D9311299DCFCF009D8A65 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		036D92FA299D91C8009D8A65 /* SwiftUI-List */ = {
 			isa = PBXGroup;
 			children = (
+				036D930F299DCDDA009D8A65 /* Library.swift */,
 				036D9309299D98AA009D8A65 /* Model */,
 				036D92FB299D91C8009D8A65 /* SwiftUI_ListApp.swift */,
 				036D930A299D98C2009D8A65 /* Book.swift */,
@@ -85,6 +90,7 @@
 			children = (
 				036D92FD299D91C8009D8A65 /* ContentView.swift */,
 				036D930D299D994D009D8A65 /* Book views.swift */,
+				036D9311299DCFCF009D8A65 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,7 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				036D930E299D994D009D8A65 /* Book views.swift in Sources */,
+				036D9312299DCFD0009D8A65 /* DetailView.swift in Sources */,
 				036D92FE299D91C8009D8A65 /* ContentView.swift in Sources */,
+				036D9310299DCDDA009D8A65 /* Library.swift in Sources */,
 				036D92FC299D91C8009D8A65 /* SwiftUI_ListApp.swift in Sources */,
 				036D930B299D98C2009D8A65 /* Book.swift in Sources */,
 			);
