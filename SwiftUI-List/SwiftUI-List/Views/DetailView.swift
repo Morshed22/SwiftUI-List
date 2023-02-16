@@ -10,8 +10,10 @@ import SwiftUI
 struct DetailView: View {
     let book: Book
     var body: some View {
-        Book.Image(title: book.title)
-        Spacer()
+        VStack {
+            Book.Image(title: book.title)
+            Spacer()
+        }
     }
 }
 
