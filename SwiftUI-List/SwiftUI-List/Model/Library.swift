@@ -28,6 +28,11 @@ class Library: ObservableObject{
         booksCache.insert(book, at: 0)
         images[book] = image
     }
+    
+    /// Delete Items
+    func deleteBook() {
+        
+    }
 
   /// An in-memory cache of the manually-sorted books.
   @Published private var booksCache: [Book] = [
