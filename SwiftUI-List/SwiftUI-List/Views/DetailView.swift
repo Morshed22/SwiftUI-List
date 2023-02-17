@@ -28,6 +28,11 @@ struct DetailView: View {
         .sheet(isPresented: $showingImagePicker) {
             PHPickerViewController.View(image: $image)
         }
+        .confirmationDialog("Delete image for \(book.title)", isPresented: .constant(true)) {
+            Button("Delete", role: .destructive){ image = nil }
+        } message: {
+            Text("Delete image for \(book.title)")
+        }
         
     }
 }
@@ -35,5 +40,6 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView(book: .init(), image: .constant(nil))
+            .previewInAllColorSchemes
     }
 }

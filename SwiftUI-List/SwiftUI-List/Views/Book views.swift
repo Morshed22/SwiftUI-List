@@ -62,10 +62,16 @@ extension Image{
     }
 }
 
-extension Book.Image{
+extension Book.Image {
     //A preview Image.
     init(title: String){
         self.init(image: nil, title: title, cornerRadius: .init())
+    }
+}
+
+extension View {
+    var previewInAllColorSchemes: some View {
+        ForEach(ColorScheme.allCases, id: \.self, content: preferredColorScheme)
     }
 }
 
@@ -77,5 +83,6 @@ struct Book_Previews: PreviewProvider{
             Book.Image(title: "")
             Book.Image(title:"📑")
         }
+        .previewInAllColorSchemes
     }
 } 
