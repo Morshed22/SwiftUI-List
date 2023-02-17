@@ -30,8 +30,8 @@ struct ContentView: View {
                 .padding(.vertical, 8)
                 .sheet(isPresented: $addingNewBook, content: NewBookView.init)
                 
-                ForEach(libaray.sortedBooks){ book in
-                    BookRow(book: book)
+                ForEach(Section.allCases, id: \.self){
+                    SectionView(section: $0)
                 }
                 .navigationTitle("My Library")
             }
@@ -59,6 +59,40 @@ struct BookRow: View {
                 .lineLimit(1)
             }
             .padding(.vertical)
+        }
+    }
+}
+
+private struct SectionView:View {
+    let section: Section
+    @EnvironmentObject var library: Library
+    
+    var title: String{
+        switch section {
+        case .readMe:
+            return "Read Me!"
+        case .finished:
+            return "Finished"
+        }
+    }
+    
+    var body: some View {
+        if let books = library.sortedBooks[section]{
+            SwiftUI.Section{
+                ForEach(books) { book in
+                    BookRow(book: book)
+                }
+            } header: {
+                ZStack {
+                    Image("BookTexture")
+                        .resizable()
+                        .scaledToFit()
+                    Text(title)
+                        .font(.custom("American Typewriter", size: 24))
+                        .foregroundColor(.primary)
+                }
+                .listRowInsets(.init())
+            }
         }
     }
 }
