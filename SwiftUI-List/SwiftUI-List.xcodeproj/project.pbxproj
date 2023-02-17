@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0315DBF4299EB8C2003E5ED6 /* PHPickerViewController.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315DBF3299EB8C2003E5ED6 /* PHPickerViewController.View.swift */; };
+		0315DBF6299F3F5C003E5ED6 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315DBF5299F3F5C003E5ED6 /* NewBookView.swift */; };
+		0315DBF8299F42CA003E5ED6 /* ReviewAndImageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315DBF7299F42CA003E5ED6 /* ReviewAndImageStack.swift */; };
 		036D92FC299D91C8009D8A65 /* SwiftUI_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D92FB299D91C8009D8A65 /* SwiftUI_ListApp.swift */; };
 		036D92FE299D91C8009D8A65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D92FD299D91C8009D8A65 /* ContentView.swift */; };
 		036D9300299D91C9009D8A65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036D92FF299D91C9009D8A65 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		0315DBF3299EB8C2003E5ED6 /* PHPickerViewController.View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHPickerViewController.View.swift; sourceTree = "<group>"; };
+		0315DBF5299F3F5C003E5ED6 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
+		0315DBF7299F42CA003E5ED6 /* ReviewAndImageStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewAndImageStack.swift; sourceTree = "<group>"; };
 		036D92F8299D91C8009D8A65 /* SwiftUI-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		036D92FB299D91C8009D8A65 /* SwiftUI_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ListApp.swift; sourceTree = "<group>"; };
 		036D92FD299D91C8009D8A65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				036D92FD299D91C8009D8A65 /* ContentView.swift */,
 				036D930D299D994D009D8A65 /* Book views.swift */,
 				036D9311299DCFCF009D8A65 /* DetailView.swift */,
+				0315DBF5299F3F5C003E5ED6 /* NewBookView.swift */,
+				0315DBF7299F42CA003E5ED6 /* ReviewAndImageStack.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,8 +178,10 @@
 				036D9312299DCFD0009D8A65 /* DetailView.swift in Sources */,
 				036D92FE299D91C8009D8A65 /* ContentView.swift in Sources */,
 				036D9310299DCDDA009D8A65 /* Library.swift in Sources */,
+				0315DBF6299F3F5C003E5ED6 /* NewBookView.swift in Sources */,
 				0315DBF4299EB8C2003E5ED6 /* PHPickerViewController.View.swift in Sources */,
 				036D92FC299D91C8009D8A65 /* SwiftUI_ListApp.swift in Sources */,
+				0315DBF8299F42CA003E5ED6 /* ReviewAndImageStack.swift in Sources */,
 				036D930B299D98C2009D8A65 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

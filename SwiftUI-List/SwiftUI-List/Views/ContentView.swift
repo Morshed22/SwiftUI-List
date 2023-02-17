@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var addingNewBook = false
     @State var libaray = Library()
+
     var body: some View {
         NavigationView {
             List {
                 Button {
-                    
+                    addingNewBook = true
                 } label: {
                     Spacer()
                     VStack(spacing: 6){
@@ -26,6 +28,7 @@ struct ContentView: View {
                 }
                 .buttonStyle(.borderless)
                 .padding(.vertical, 8)
+                .sheet(isPresented: $addingNewBook, content: NewBookView.init)
                 
                 ForEach(libaray.sortedBooks){ book in
                     BookRow(book: book, image: $libaray.images[book])
