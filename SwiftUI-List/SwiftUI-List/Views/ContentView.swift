@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var addingNewBook = false
     @EnvironmentObject var libaray: Library
-
+    
     var body: some View {
         NavigationView {
             List {
@@ -33,8 +33,11 @@ struct ContentView: View {
                 ForEach(Section.allCases, id: \.self){
                     SectionView(section: $0)
                 }
-                .navigationTitle("My Library")
+                
             }
+            .listStyle(.insetGrouped)
+            .toolbar(content: EditButton.init)
+            .navigationTitle("My Library")
         }
     }
 }
@@ -93,13 +96,26 @@ private struct SectionView:View {
                         }
                         .swipeActions(edge:.trailing){
                             Button(role: .destructive) {
-                                // TODO: Delete Book
+                                guard let index = books.firstIndex(where: {$0.id == book.id})
+                                else { return }
+                                withAnimation {
+                                    library.deleteBooks(atOffsets: .init(integer: index), section: section)
+                                }
                             } label: {
                                 Label("Delete", systemImage: "trash")
                             }
-
+                            
                         }
-                }.labelStyle(.iconOnly)
+                }
+                .onDelete(perform: { indexSet in
+                    withAnimation {
+                        library.deleteBooks(atOffsets: indexSet, section: section)
+                    }
+                })
+                .onMove(perform: { indexes, newOffset in
+                    library.moveBooks(oldOffsets: indexes, newOffSet: newOffset, section: section)
+                })
+                .labelStyle(.iconOnly)
             } header: {
                 ZStack {
                     Image("BookTexture")
