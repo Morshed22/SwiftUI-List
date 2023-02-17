@@ -61,10 +61,8 @@
 		036D92FA299D91C8009D8A65 /* SwiftUI-List */ = {
 			isa = PBXGroup;
 			children = (
-				036D930F299DCDDA009D8A65 /* Library.swift */,
 				036D9309299D98AA009D8A65 /* Model */,
 				036D92FB299D91C8009D8A65 /* SwiftUI_ListApp.swift */,
-				036D930A299D98C2009D8A65 /* Book.swift */,
 				036D930C299D992F009D8A65 /* Views */,
 				036D92FF299D91C9009D8A65 /* Assets.xcassets */,
 				036D9301299D91C9009D8A65 /* Preview Content */,
@@ -83,6 +81,8 @@
 		036D9309299D98AA009D8A65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				036D930F299DCDDA009D8A65 /* Library.swift */,
+				036D930A299D98C2009D8A65 /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
